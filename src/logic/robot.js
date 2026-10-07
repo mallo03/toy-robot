@@ -12,11 +12,15 @@ export function move(robot) {
 }
 
 export function left(robot) {
-    // todo
+    const oldFacing = DIRECTIONS.indexOf(robot.facing)
+    const newFacing = DIRECTIONS[(oldFacing + DIRECTIONS.length - 1) % DIRECTIONS.length]
+    return { robot: { ...robot, facing: newFacing}, ok: true}
 }
 
 export function right(robot) {
-    // todo
+    const oldFacing = DIRECTIONS.indexOf(robot.facing)
+    const newFacing = DIRECTIONS[(oldFacing + 1) % DIRECTIONS.length]
+    return { robot: { ...robot, facing: newFacing}, ok: true}
 }
 
 export function report(robot) {
