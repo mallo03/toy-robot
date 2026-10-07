@@ -8,7 +8,27 @@ export function place(x, y, facing) {
 }
 
 export function move(robot) {
-    // todo
+    let {x , y} = robot
+    switch (robot.facing) {
+        case 'NORTH':
+            y += 1
+            break;
+        case 'SOUTH':
+            y -= 1
+            break;
+        case 'EAST':
+            x += 1
+            break;
+        case 'WEST':
+            x -= 1
+            break;
+    }
+
+    if (x > GRID_SIZE - 1 || x < 0 || y > GRID_SIZE - 1 || y < 0) {
+        return {robot, ok:false}
+    }
+
+    return { robot: { ...robot, x, y }, ok: true };
 }
 
 export function left(robot) {
