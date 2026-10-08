@@ -1,16 +1,32 @@
-# React + Vite
+# Toy Robot
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+React app for the Toy Robot challenge.
 
-Currently, two official plugins are available:
+## Getting started
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Requires Node.js.
 
-## React Compiler
+```bash
+# install dependencies
+npm install
+ 
+# start dev server (opens at http://localhost:5173)
+npm run dev
+ 
+# run tests
+npm test
+```
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## How to use
+1. Enter a valid X and Y position, choose a direction, and press Place.
+2. Use Move, Left and Right to drive the robot around.
+3. Press Report to see the current position and direction.
+4. Have a play with it!
 
-## Expanding the ESLint configuration
+## Assumptions
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Commands are issued as buttons and a form.
+- The robot starts off the table.
+- 0,0 is the bottom left of the grid. North increases Y and East increases X.
+- A move that would make the robot move off the table is ignored. The error is shown in output.
+- The command visual output if it succeeded or failed only shows the most recent one.
