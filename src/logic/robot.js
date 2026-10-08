@@ -1,5 +1,5 @@
 export const GRID_SIZE = 5;
-const DIRECTIONS = ["NORTH", "EAST", "SOUTH", "WEST"];
+export const DIRECTIONS = ["NORTH", "EAST", "SOUTH", "WEST"];
 
 // All funcs need to return ok: true or false (failed or succeeded)
 // Robot should look like { x: 1, y: 2, facing: 'NORTH' }
