@@ -10,6 +10,13 @@ for (let i = 0; i < GRID_SIZE; i++) {
 }
 const rows = [...cols].reverse();
 
+const rotation = {
+  NORTH: "rotate-0",
+  EAST: "rotate-90",
+  SOUTH: "rotate-180",
+  WEST: "-rotate-90",
+};
+
 function App() {
   const [robot, setRobot] = useState(null);
   const [outputLog, setOutputLog] = useState(null);
@@ -38,7 +45,7 @@ function App() {
                 {robot && robot.x === x && robot.y === y && (
                   <img
                     src={robotImg}
-                    className={`w-3/4 h-3/4 transition-transform duration-200 ${rotation[robot.facing]}`}
+                    className={`w-3/4 h-3/4 ${rotation[robot.facing]}`}
                   />
                 )}
               </div>
