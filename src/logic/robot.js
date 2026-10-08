@@ -1,4 +1,4 @@
-const GRID_SIZE = 5;
+export const GRID_SIZE = 5;
 const DIRECTIONS = ["NORTH", "EAST", "SOUTH", "WEST"];
 
 // All funcs need to return ok: true or false (failed or succeeded)
